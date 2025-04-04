@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>게이야..</title>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #fee500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    img {
+      width: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="images.jpg" alt="기축통화국">
+  
+  <h1>📢 기축통화국 가자 ~ </h1>
+  <p>벌벌떠는 친구들에게 공유해서 안심을 시켜줍시다.</p>
+  <button onclick="sendFoolMessage()">카카오톡으로 공유하기</button>
+
+  <script>
+    Kakao.init("1768305d59a51a92f9129c6c2a85c620");
+
+    function sendFoolMessage() {
+      Kakao.Link.sendCustom({
+        templateId: 1225212 
+      });
+    }
+  </script>
+
+</body>
+</html>
